@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 #define MAXLINE 80
 
 int main(int argc, char *argv[])
 {
-	File *fp;
+	FILE *fp;
 	int line = 0;
 	char buffer[MAXLINE];
 	
