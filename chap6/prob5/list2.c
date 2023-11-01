@@ -61,6 +61,12 @@ char type(mode_t mode)
  		return('l');
 	if (S_ISFIFO(mode))
 		return('p');
+	if (S_ISSOCK(mode))
+		return('s');
+}
+char* perm(mode_t mode)
+{
+	static char perms[10];
 	strcpy(perms "---------");
 
 	for (int i = 0; i < 3; i++)
