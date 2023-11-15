@@ -10,17 +10,17 @@ int main(void)
 	if(atexit(exit_handler2) != 0)
 		perror("exit_hander2 fail to register");
 	
-	printf("main end \n");
+	printf("main done \n");
 	exit(0);
 }
 
 static void exit_handler1(void)
 {
-	printf("first exit processer");
+	printf("first exit handler \n");
 }
 
 static void exit_handler2(void)
 {
-	printf("second exit processer");
+	printf("second exit handler \n");
 }
 
