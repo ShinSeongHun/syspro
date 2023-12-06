@@ -4,12 +4,14 @@ unsigned int alarm(unsigned int sec);
 
 int main()
 {
+	int n = 1;
 	alarm(5);
 	printf("Loop start \n");
 	while(1)
 	{
 		sleep(1);
-		printf("1 seconds \n");
+		printf("%d seconds \n", n);
+		n++;
 	}
 
 	printf("Can't run \n");
