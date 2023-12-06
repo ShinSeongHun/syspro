@@ -8,13 +8,15 @@ void alarmHandler();
 
 int main()
 {
+	int n = 1;
 	signal(SIGALRM, alarmHandler);
 	alarm(5);
 	printf("Loop Start \n");
 	while(1)
 	{
 		sleep(1);
-		printf("1 second \n");
+		printf("%d second \n", n);
+		n++;
 	}
 	printf("Can't run");
 }
